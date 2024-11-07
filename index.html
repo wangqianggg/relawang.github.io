@@ -4,21 +4,25 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>👻👻👻相对rela的个人博客👻👻👻</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:title" content="👻👻👻相对rela的个人博客👻👻👻">
+<meta property="og:url" content="https://wangqianggg.github.io/index.html">
+<meta property="og:site_name" content="👻👻👻相对rela的个人博客👻👻👻">
+<meta property="og:locale">
+<meta property="article:author" content="relaWang">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="👻👻👻相对rela的个人博客👻👻👻" type="application/atom+xml">
   
   
     <link rel="shortcut icon" href="/favicon.png">
   
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -29,7 +33,7 @@
 
   
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
@@ -39,7 +43,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">👻👻👻相对rela的个人博客👻👻👻</a>
       </h1>
       
     </div>
@@ -55,12 +59,12 @@
       <nav id="sub-nav">
         
         
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+          <a class="nav-icon" href="/atom.xml" title="Flux RSS"><span class="fa fa-rss"></span></a>
         
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+        <a class="nav-icon nav-search-btn" title="Rechercher"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Rechercher"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wangqianggg.github.io"></form>
       </div>
     </div>
   </div>
@@ -69,10 +73,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DFS1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/11/07/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-11-07T05:59:06.749Z" itemprop="datePublished">2024-11-07</time>
+    <a href="/2023/10/26/DFS1/" class="article-date">
+  <time class="dt-published" datetime="2023-10-26T07:39:38.000Z" itemprop="datePublished">2023-10-26</time>
 </a>
     
   </div>
@@ -83,7 +87,374 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/11/07/hello-world/">Hello World</a>
+      <a class="p-name article-title" href="/2023/10/26/DFS1/">DFS1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="深度优先搜索算法（DFS）（一）"><a href="#深度优先搜索算法（DFS）（一）" class="headerlink" title="深度优先搜索算法（DFS）（一）"></a>深度优先搜索算法（DFS）（一）</h2><p>参考：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43272781/article/details/82959089">DFS(深度优先搜索算法)</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cs-whut/p/11147213.html">DFS（一）：深度优先搜索的基本思想</a><br><a target="_blank" rel="noopener" href="http://data.biancheng.net/view/325.html">深度优先搜索（DFS）算法详解</a></p>
+<h3 id="00-🍔🍔🍔"><a href="#00-🍔🍔🍔" class="headerlink" title="00 🍔🍔🍔"></a>00 🍔🍔🍔</h3><p>一天摸鱼一天爽，天天摸鱼天天爽；<br>最近的系统学习没有记录，零零碎碎的工作也无法记录；<br>闲暇时间刷刷题，碰到了让人头疼的一道题：DFS算法；<br>浅学一下⑧</p>
+<h3 id="01-DFS基本思想"><a href="#01-DFS基本思想" class="headerlink" title="01 DFS基本思想"></a>01 DFS基本思想</h3><p>深度优先搜索算法（Depth First Search，简称DFS）</p>
+<ul>
+<li>图&#x2F;树</li>
+<li>用于遍历或搜索</li>
+<li>搜索的最糟情况时间复杂度为O(!n)</li>
+</ul>
+<p>深度优先搜索算法：从某一节点出发，沿深度进行搜索节点，当相邻无未被搜索节点时，回溯到有未被搜索节点处，重复上述动作，直至全部节点被搜索（遍历）。<br>假设从顶点 V 出发，则最终还会回退到顶点 V。此时，深度优先搜索算法会从所有顶点中重新找一个尚未访问的顶点，如果能找到，则以同样的方式继续寻找其它未访问的顶点；如果找不到，则算法执行结束。</p>
+<p>回溯法（探索与回溯法）是一种选优搜索法，又称为试探法，按选优条件向前搜索，以达到目标。但当探索到某一步时，发现原先选择并不优或达不到目标，就退回一步重新选择，这种走不通就退回再走的技术为回溯法，而满足回溯条件的某个状态的点称为“回溯点”。 </p>
+<p>模板（C）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">check</span><span class="params">(参数)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(满足条件)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="type">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> step)</span></span><br><span class="line">&#123;</span><br><span class="line">        判断边界</span><br><span class="line">        &#123;</span><br><span class="line">            相应操作</span><br><span class="line">        &#125;</span><br><span class="line">        尝试每一种可能</span><br><span class="line">        &#123;</span><br><span class="line">               满足check条件</span><br><span class="line">               标记</span><br><span class="line">               继续下一步dfs(step+<span class="number">1</span>)</span><br><span class="line">               恢复初始状态（回溯的时候要用到）</span><br><span class="line">        &#125;</span><br><span class="line">&#125;   </span><br></pre></td></tr></table></figure>
+
+<h3 id="02-实例"><a href="#02-实例" class="headerlink" title="02 实例"></a>02 实例</h3><h4 id="leetcode题目"><a href="#leetcode题目" class="headerlink" title="leetcode题目"></a>leetcode题目</h4><ol start="2698">
+<li>求一个整数的惩罚数<br>给你一个正整数 n ，请你返回 n 的 惩罚数 。<br>n 的 惩罚数 定义为所有满足以下条件 i 的数的平方和：</li>
+</ol>
+<ul>
+<li>1 &lt;&#x3D; i &lt;&#x3D; n</li>
+<li>i * i 的十进制表示的字符串可以分割成若干连续子字符串，且这些子字符串对应的整数值之和等于 i</li>
+</ul>
+<p>示例 1：</p>
+<blockquote>
+<p>输入：n &#x3D; 10<br>输出：182<br>解释：总共有 3 个整数 i 满足要求：<br>1 ，因为 1 * 1 &#x3D; 1<br>9 ，因为 9 * 9 &#x3D; 81 ，且 81 可以分割成 8 + 1 。<br>10 ，因为 10 * 10 &#x3D; 100 ，且 100 可以分割成 10 + 0 。<br>因此，10 的惩罚数为 1 + 81 + 100 &#x3D; 182</p>
+</blockquote>
+<p>示例 2：</p>
+<blockquote>
+<p>输入：n &#x3D; 37<br>输出：1478<br>解释：总共有 4 个整数 i 满足要求：<br>1 ，因为 1 * 1 &#x3D; 1<br>9 ，因为 9 * 9 &#x3D; 81 ，且 81 可以分割成 8 + 1 。<br>10 ，因为 10 * 10 &#x3D; 100 ，且 100 可以分割成 10 + 0 。<br>36 ，因为 36 * 36 &#x3D; 1296 ，且 1296 可以分割成 1 + 29 + 6 。<br>因此，37 的惩罚数为 1 + 81 + 100 + 1296 &#x3D; 1478</p>
+</blockquote>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>实质上是找到满足要求的整数，再求平方和；<br>对于正整数n，怎么找几个满足要求的整数？自然遍历1~n，判断是否满足要求；<br>判断是否满足要求是重点，常用的循环遍历似乎很难做到，这里就需要用到DFS-深度优先算法来解决。</p>
+<p>以36为例，36 * 36 &#x3D; 1296，其中1 + 29 + 6 &#x3D; 36，满足要求；<br>这样看来，就是在1296的基础上进行分割再相加，穷举发现共有八种情况（2^3），分析情况：</p>
+<blockquote>
+<p>1+2+9+6<br>1+2+96<br>1+29+6			✔️<br>1+296<br>12+9+6<br>12+96<br>129+6<br>1296</p>
+</blockquote>
+<p>明显，两个单个数字间，无非两种情况，加号连接或者不分割，可以想象成树状结构：</p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202310251958308.png" alt="Snipaste_2023-10-25_19-49-33"></p>
+<p>通过这个树状结构，可以通过深度优先来进行搜索；<br>以节点‘1’开始，向下搜索，（这里以左侧优先为例），搜索到‘1+2+9+6’节点时，判断条件成立<code>pos == s.Length</code>进行判断；<br>若未满足条件则继续搜索，无法继续向下搜索则进行回溯，返回上一个节点，再搜索未被搜索过的节点……如此反复，直到完成搜索或全部遍历完成；<br>当然，在该题中，为了减少不必要的搜索，可以增加判断条件<code>sum + tot &gt; target</code>即当值大于<code>target</code>时，直接跳出本次循环。</p>
+<p><code>DFS(string s, int pos, int tot, int target)</code>函数中，<code>s</code>是目标整数平方值的字符串，即‘1296’，<code>pos</code>是<code>s</code>的索引，<code>tot</code>是当前值（以‘1+2+9+6’为例就是18），<code>target</code>是目标整数，即‘36’；<br>在调用DFS时，输入的<code>pos</code>和<code>tot</code>均应为0。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="built_in">bool</span> <span class="title">DFS</span>(<span class="params"><span class="built_in">string</span> s, <span class="built_in">int</span> pos, <span class="built_in">int</span> tot, <span class="built_in">int</span> target</span>)</span> &#123;</span><br><span class="line">       <span class="keyword">if</span> (pos == s.Length) &#123;</span><br><span class="line">           <span class="keyword">return</span> tot == target;</span><br><span class="line">       &#125; </span><br><span class="line">       <span class="built_in">int</span> sum = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">for</span> (<span class="built_in">int</span> i = pos; i &lt; s.Length; i++) &#123;</span><br><span class="line">           sum = sum * <span class="number">10</span> + s[i] - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">           <span class="keyword">if</span> (sum + tot &gt; target) &#123;</span><br><span class="line">               <span class="keyword">break</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">if</span> (DFS(s, i + <span class="number">1</span>, sum + tot, target)) &#123;</span><br><span class="line">               <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>那么再补上之前的遍历，完成这道题、：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Solution</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">PunishmentNumber</span>(<span class="params"><span class="built_in">int</span> n</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            <span class="built_in">string</span> s = (i * i).ToString();</span><br><span class="line">            <span class="keyword">if</span> (DFS(s, <span class="number">0</span>, <span class="number">0</span>, i)) &#123;</span><br><span class="line">                res += i * i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">bool</span> <span class="title">DFS</span>(<span class="params"><span class="built_in">string</span> s, <span class="built_in">int</span> pos, <span class="built_in">int</span> tot, <span class="built_in">int</span> target</span>)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (pos == s.Length) &#123;</span><br><span class="line">            <span class="keyword">return</span> tot == target;</span><br><span class="line">        &#125; </span><br><span class="line">        <span class="built_in">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = pos; i &lt; s.Length; i++) &#123;</span><br><span class="line">            sum = sum * <span class="number">10</span> + s[i] - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (sum + tot &gt; target) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (DFS(s, i + <span class="number">1</span>, sum + tot, target)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wangqianggg.github.io/2023/10/26/DFS1/" data-id="clo6vl20i0000lstkf1tne5nw" data-title="DFS1" class="article-share-link"><span class="fa fa-share">Partager</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-nvm" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/31/nvm/" class="article-date">
+  <time class="dt-published" datetime="2023-08-31T04:12:52.000Z" itemprop="datePublished">2023-08-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/08/31/nvm/">nvm</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="NVM-Windows的安装和使用"><a href="#NVM-Windows的安装和使用" class="headerlink" title="NVM-Windows的安装和使用"></a>NVM-Windows的安装和使用</h2><h3 id="00🐽🐽🐽"><a href="#00🐽🐽🐽" class="headerlink" title="00🐽🐽🐽"></a>00🐽🐽🐽</h3><p>在学习或者开发过程中，往往会遇到依赖的版本问题，常用的Node-js也会有这样的问题，但往往我们需要用到不同版本，频繁的卸载安装并不是一个好的解决方法；<br>于是乎，出现了Node-js版本管理工具，允许系统安装不同版本的Node-js并在需要的时候随意切换版本。</p>
+<p>常见的Node-js版本管理工具：</p>
+<ul>
+<li>nvm：只适用于Linux和macOS，windows环境下选择NVM-Windows</li>
+<li>n：交互式的工具，同样只适Linux用于和macOS ，不适用于 Windows</li>
+<li>fnm：使用 Rust 构建的一款简单工具，适用于Linux、macOS以及windows</li>
+</ul>
+<p>Win11环境下的我选择使用NVM-Windows。</p>
+<h3 id="01环境"><a href="#01环境" class="headerlink" title="01环境"></a>01环境</h3><ul>
+<li>win11</li>
+<li><del>Node-js(16.18.0)(更改前)</del></li>
+<li>Node-js(14.xx.x)（目标）</li>
+</ul>
+<h3 id="02安装与使用"><a href="#02安装与使用" class="headerlink" title="02安装与使用"></a>02安装与使用</h3><p><strong>首先要将当前版本的Node-js卸载，不卸载的话后续可能会出现一些版本冲突的问题</strong></p>
+<p>卸载过后开始下载nvm-windows<br>下载地址：<a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a><br>当前版本：1.1.11<br>选择exe或zip文件下载，这里我下载的是exe文件：</p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308311109584.png"></p>
+<p>安装时出现的两个路径分别是nvm安装路径和nodejs启动路径：</p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308311132879.png"></p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308311133196.png"></p>
+<p>安装完成后使用管理员身份运行cmd，输入<code>nvm</code>，检查是否安装成功：</p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308311138990.png"></p>
+<p>查看可下载的Node-js版本，或到[官网](<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/releases">Previous Releases | Node.js (nodejs.org)</a>)查看：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm list available</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308311148394.png"></p>
+<p>下载需要的版本(建议选择LTS长期支持版本)：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm install 14.17.6</span><br><span class="line">nvm install 14.17.6</span><br></pre></td></tr></table></figure>
+
+<p>查看当前已下载版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm list</span><br></pre></td></tr></table></figure>
+
+<p>切换版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 14.17.6</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308311159150.png"></p>
+<h3 id="03坑"><a href="#03坑" class="headerlink" title="03坑"></a>03坑</h3><p>我在安装时没有提前卸载Node-js，nvm无法正常安装其他版本；<br>卸载后可以正常安装并使用其他版本Node-js；<br>之后发现git无法正常使用（？莫名其妙）<br>卸载git后重新安装并重启解决🐽</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wangqianggg.github.io/2023/08/31/nvm/" data-id="cllynincj0000jotkhp1yg56a" data-title="nvm" class="article-share-link"><span class="fa fa-share">Partager</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-vue1config" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/30/vue1config/" class="article-date">
+  <time class="dt-published" datetime="2023-08-30T01:42:23.000Z" itemprop="datePublished">2023-08-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/08/30/vue1config/">vue1config</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Vue（一）API–全局配置"><a href="#Vue（一）API–全局配置" class="headerlink" title="Vue（一）API–全局配置"></a>Vue（一）API–全局配置</h2><h3 id="app-config"><a href="#app-config" class="headerlink" title="app.config"></a>app.config</h3><p>每个应用实例都会暴露一个config对象，其中包含了对这个引用的配置设定</p>
+<h4 id="app-config-silent"><a href="#app-config-silent" class="headerlink" title="app.config.silent"></a>app.config.silent</h4><p>日志与警告静音</p>
+<p>类型：<code>bollean</code><br>默认：<code>false</code></p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="property">config</span>.<span class="property">silent</span> = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="app-config-devtools"><a href="#app-config-devtools" class="headerlink" title="app.config.devtools"></a>app.config.devtools</h4><p>是否允许vue-devtools检查代码</p>
+<p>类型：<code>bollean</code><br>开发版本默认：<code>true</code><br>生产版本默认：<code>false</code></p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="property">config</span>.<span class="property">devtools</span> = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="app-config-errorHandler"><a href="#app-config-errorHandler" class="headerlink" title="app.config.errorHandler"></a>app.config.errorHandler</h4><p>用于为应用内抛出的未捕获错误指定一个全局处理函数</p>
+<p>类型：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Appconfig</span>&#123;</span><br><span class="line">	errorHandler?:<span class="function">(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">		err: <span class="built_in">unknown</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">		instance: ComponentPublicInstance | <span class="literal">null</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">		<span class="comment">//`info`是一个Vue特定的错误信息</span></span></span></span><br><span class="line"><span class="params"><span class="function">		info: <span class="built_in">string</span></span></span></span><br><span class="line"><span class="params"><span class="function">	</span>) =&gt;</span> <span class="built_in">void</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>错误处理器接受三个参数：错误对象、触发该错误的组件实例和一个指出错误来源类型信息的字符串<br>它可以从下面这些来源中捕获错误：<br>  组件渲染器、事件处理器、生命周期钩子、setup()函数、侦听器、自定义指令钩子、过渡钩子</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="property">config</span>.<span class="property">errorHandler</span> = <span class="function">(<span class="params">err, instance, info</span>) =&gt;</span> &#123;</span><br><span class="line">	<span class="comment">//处理错误</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="app-config-warnHandler"><a href="#app-config-warnHandler" class="headerlink" title="app.config.warnHandler"></a>app.config.warnHandler</h4><p>用于为Vue的运行时警告指定一个自定义处理函数</p>
+<p>类型：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">AppConfig</span>&#123;</span><br><span class="line">	warnHandler?:<span class="function">(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">		msg: <span class="built_in">string</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">		instance: ComponentPublicInstance | <span class="literal">null</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">		trace: <span class="built_in">string</span></span></span></span><br><span class="line"><span class="params"><span class="function">	</span>) =&gt;</span> <span class="built_in">void</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>警告处理器将接受警告信息作为其第一个参数，来源组件实例为第二个参数，以及组件追踪字符串为第三个参数</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="property">config</span>.<span class="property">warnHandler</span> = <span class="function">(<span class="params">msg, instance, trace</span>) =&gt;</span> &#123;</span><br><span class="line">	<span class="comment">//`trace`是组件层级结构的追踪</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="app-config-performance"><a href="#app-config-performance" class="headerlink" title="app.config.performance"></a>app.config.performance</h4><p>设置此项为true可以在浏览器开发工具的”性能&#x2F;时间线”页中启用对组件初始化、编译、渲染和修补的性能表现追踪</p>
+<p>类型：<code>boolean</code><br>默认：<code>false</code></p>
+<h4 id="app-config-ignoredElements"><a href="#app-config-ignoredElements" class="headerlink" title="app.config.ignoredElements"></a>app.config.ignoredElements</h4><p>忽略Vue之外的自定义元素</p>
+<p>类型：<code>Array&lt;string | RegExp&gt;</code></p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="property">config</span>.<span class="property">ignoredElements</span> = [</span><br><span class="line">	<span class="string">&#x27;my-custom-web-component&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;another-web-componebt&#x27;</span></span><br><span class="line">	<span class="comment">//用一个`RegExp`忽略所有&quot;ion-&quot;开头的元素</span></span><br><span class="line">	/^ion-/</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h4 id="app-config-keyCodes"><a href="#app-config-keyCodes" class="headerlink" title="app.config.keyCodes"></a>app.config.keyCodes</h4><p>用于自定义按键别名和键码的映射关系</p>
+<p>类型：<code>&#123;[key: string]: number | Array&lt;number&gt;&#125;</code></p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="property">config</span>.<span class="property">keyCodes</span> = &#123;</span><br><span class="line">	<span class="attr">v</span>: <span class="number">86</span>,</span><br><span class="line">	<span class="attr">f1</span>: <span class="number">112</span>,</span><br><span class="line">	<span class="attr">mediaPlayPause</span>: <span class="number">179</span>,</span><br><span class="line">	<span class="string">&quot;media-play-pause&quot;</span>:<span class="number">179</span>,</span><br><span class="line">	<span class="attr">up</span>: [<span class="number">38</span>, <span class="number">87</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="app-config-productionTip"><a href="#app-config-productionTip" class="headerlink" title="app.config.productionTip"></a>app.config.productionTip</h4><p>Vue在启动时是否生成生产提示</p>
+<p>类型：<code>bollean</code><br>默认：<code>true</code></p>
+<h4 id="app-config-globalProperties"><a href="#app-config-globalProperties" class="headerlink" title="app.config.globalProperties"></a><del>app.config.globalProperties</del></h4><p>类型：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">AppConfig</span>&#123;</span><br><span class="line">	<span class="attr">globalPropertues</span>: <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="built_in">any</span>&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是对Vue2中Vue.prototype使用方式的一种替代，<strong>在Vue3中不存在此写法</strong></p>
+<h4 id="app-config-optionMergeStrategies"><a href="#app-config-optionMergeStrategies" class="headerlink" title="app.config.optionMergeStrategies"></a>app.config.optionMergeStrategies</h4><p>一个用于定义自定义组件选项的合并策略的对象</p>
+<p>类型：<code>&#123;[key: string]: Function&#125;</code></p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">AppConfig</span>&#123;</span><br><span class="line">	<span class="attr">optionMergeStrategies</span>: <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="title class_">OptionMergeFunction</span>&gt;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> <span class="title class_">OptionMergeFunction</span> = <span class="function">(<span class="params">to: <span class="built_in">unknown</span>,<span class="keyword">from</span>: <span class="built_in">unknown</span></span>) =&gt;</span> <span class="built_in">any</span></span><br></pre></td></tr></table></figure>
+
+<p>一些插件或库对自定义组件选项添加了支持（通过注入全局mixin），这些选项在有多个不同来源时可能需要特殊的合并策略<br>可以在app.config.optionMergeStrategies对象上以选项的名称作为key，可以为一个自定义选项注册分配一个合并策略函数<br>合并策略函数分别接受在父实例和子实例上定义的该选项的值作为第一和第二个参数</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> app = <span class="title function_">creatApp</span>(&#123;</span><br><span class="line">	<span class="comment">//自身的选项</span></span><br><span class="line">	<span class="attr">msg</span>: <span class="string">&#x27;Vue&#x27;</span>,</span><br><span class="line">	<span class="comment">//来自mixin的选项</span></span><br><span class="line">	<span class="attr">mixin</span>:[</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">msg</span>: <span class="string">&#x27;Hello &#x27;</span></span><br><span class="line">		&#125;</span><br><span class="line">	],</span><br><span class="line">	<span class="title function_">mounted</span>(<span class="params"></span>)&#123;</span><br><span class="line">		<span class="comment">//在this.$options上暴露被合并的选项</span></span><br><span class="line">		<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">$options</span>.<span class="property">msg</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//为`msg`定义一个合并策略函数</span></span><br><span class="line">app.<span class="property">config</span>.<span class="property">optionMergeStrategies</span>.<span class="property">msg</span> = <span class="function">(<span class="params">parent, child</span>) =&gt;</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> (parent || <span class="string">&#x27;&#x27;</span>) + (child || <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>)</span><br><span class="line"><span class="comment">//&#x27;Hello Vue&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="app-config-compilerOptions"><a href="#app-config-compilerOptions" class="headerlink" title="app.config.compilerOptions"></a>app.config.compilerOptions</h4><blockquote>
+<p>Vue3</p>
+</blockquote>
+<p>配置运行时编译器的选项<br>设置在此对象上的值将会在浏览器内进行模板编译时使用，并会影响到所配置应用的所有组件</p>
+<h5 id="app-config-compilerOptions-isCustomElement"><a href="#app-config-compilerOptions-isCustomElement" class="headerlink" title="app.config.compilerOptions.isCustomElement"></a>app.config.compilerOptions.isCustomElement</h5><p>用于指定一个检查方法来识别原生自定义元素</p>
+<p>类型：<code>(tag: string) =&gt; bollean</code></p>
+<p>如果该标签需要当作原生自定义元素则应返回true</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将所有标签前缀为`ion-`的标签视为自定义元素</span></span><br><span class="line">app.<span class="property">config</span>.<span class="property">compilerOptions</span>.<span class="property">isCustomElement</span> = <span class="function">(<span class="params">tag</span>) =&gt;</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> tag.<span class="title function_">startsWith</span>(<span class="string">&#x27;ion-&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="app-config-compilerOptions-whitespace"><a href="#app-config-compilerOptions-whitespace" class="headerlink" title="app.config.compilerOptions.whitespace"></a>app.config.compilerOptions.whitespace</h5><p>用于调整模板中空格的处理行为</p>
+<p>类型：<code>&#39;condense&#39; | &#39;preserve&#39;</code><br>默认：<code>&#39;condense&#39;</code></p>
+<p>Vue移除&#x2F;缩短了模板中的空格以求更高效的模板输出，默认是”缩短”，表现行为如下：<br>  1.元素中开头和结尾的空格字符将被缩短为一个空格<br>  2.包含换行的元素之间的空白字符会被删除<br>  3.文本节点中连续的空白字符被缩短成一个空格<br>设置该选项为<code>&#39;preserve&#39;</code>则会禁用2、3两项</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="property">config</span>.<span class="property">compilerOptions</span>.<span class="property">whitespace</span> = <span class="string">&#x27;preserve&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="app-config-compilerOptions-delimiters"><a href="#app-config-compilerOptions-delimiters" class="headerlink" title="app.config.compilerOptions.delimiters"></a>app.config.compilerOptions.delimiters</h5><p>用于调整模板内文本插值的分隔符</p>
+<p>类型：<code>[string, string]</code><br>默认：<code>[&#39;&#123;&#123;','&#125;&#125;&#39;]</code></p>
+<p>此项通常是为了避免与同样使用mustache语法的服务器端框架发生冲突</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//分隔符改为ES6模板字符串样式</span></span><br><span class="line">app.<span class="property">config</span>.<span class="property">compilerOptions</span>.<span class="property">delimiters</span> = [<span class="string">&#x27;$&#123;&#x27;</span>, <span class="string">&#x27;&#125;&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h5 id="app-config-compilerOptions-comments"><a href="#app-config-compilerOptions-comments" class="headerlink" title="app.config.compilerOptions.comments"></a>app.config.compilerOptions.comments</h5><p>用于调整是否移除模板中的HTML注释</p>
+<p>类型：<code>bollean</code><br>默认：<code>false</code></p>
+<p>默认情况下，Vue 会在生产环境移除所有注释，设置该项为true会强制 Vue 在生产环境也保留注释，在开发过程中，注释是始终被保留的。</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="property">config</span>.<span class="property">compilerOptions</span>.<span class="property">comments</span> = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><p>Vue2：<a target="_blank" rel="noopener" href="https://v2.cn.vuejs.org/v2/api/#%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE">https://v2.cn.vuejs.org/v2/api/#%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE</a><br>Vue3：<a target="_blank" rel="noopener" href="https://cn.vuejs.org/api/">https://cn.vuejs.org/api/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wangqianggg.github.io/2023/08/30/vue1config/" data-id="cllx3pnoa00018otkf57kcs6b" data-title="vue1config" class="article-share-link"><span class="fa fa-share">Partager</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-buildblog1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/24/buildblog1/" class="article-date">
+  <time class="dt-published" datetime="2023-08-24T06:11:00.000Z" itemprop="datePublished">2023-08-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/08/24/buildblog1/">buildblog1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="搭建个人博客（一）"><a href="#搭建个人博客（一）" class="headerlink" title="搭建个人博客（一）"></a>搭建个人博客（一）</h2><h3 id="00👻👻👻"><a href="#00👻👻👻" class="headerlink" title="00👻👻👻"></a>00👻👻👻</h3><p>学习中遇到很多的问题，在网上搜索过后便抛之脑后；<br>笔记的局限在于图片，惰性使然，很多小问题不屑于记录也不方便记录；<br>学习内容增多，可真正留下来的并不多，于是乎决定写博客来记录；<br>学习也好，问题也罢，总归得留下来些东西。</p>
+<p>而网络上的博客平台也是很多，纠结之余，不如自己搭建一个简单的个人博客，于是参考大佬，选择Hexo+GitHub+PicGo来搭建个人博客。</p>
+<h3 id="01-环境"><a href="#01-环境" class="headerlink" title="01 环境"></a>01 环境</h3><ul>
+<li>win11</li>
+<li>Node(v16.18.0)</li>
+<li>Git(2.41.0.windows.3)</li>
+</ul>
+<h3 id="02-所需工具"><a href="#02-所需工具" class="headerlink" title="02 所需工具"></a>02 所需工具</h3><ul>
+<li>Github：仓库</li>
+<li>Hexo：博客框架</li>
+<li>Typora：markdown编辑器</li>
+<li>PicGo：图床工具</li>
+<li>Snipaste：截图工具</li>
+</ul>
+<h3 id="03-博客网站搭建"><a href="#03-博客网站搭建" class="headerlink" title="03 博客网站搭建"></a>03 博客网站搭建</h3><p>在D盘创建文件夹BLOG，在BLOG文件夹下以管理员身份运行cmd，<br>首先安装Hexo：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>BLOG文件夹下初始化网站：<br>提供文件夹名字会创建一个子文件夹并初始化，若不提供则在当前文件夹下初始化一个网站</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+
+<p>初始化成功后在本地部署：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g		<span class="comment">#静态部署</span></span><br><span class="line">hexo s		<span class="comment">#在本地部署</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308241358083.png" alt="image-20230823200600306"></p>
+<p>访问<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> ，如下则表示初始化博客成功：</p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308241359318.png" alt="202308232021210"></p>
+<p>按下 <kbd>Ctrl</kbd>+<kbd>C</kbd> 结束本地部署；<br>接下来将Hexo部署到GitHub上；<br>首先在GitHub上面新建一个public仓库，仓库命名为：”用户名xxx.github.io”：</p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308241359964.png" alt="202308232038225"></p>
+<p>找到文件夹中的配置文件_config.yml，在文件最下面的# Deployment中做如下修改：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">https://github.com/wangqianggg/wangqianggg.github.io.git</span>	<span class="comment">#仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<p>当然，配置文件中的其他配置可以在<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>官网中找到详细说明；<br>在blog文件夹下运行Git Bash，安装Git部署插件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>然后分别输入以下三条命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean		<span class="comment">#清除缓存文件 db.json 和已生成的静态文件 public</span></span><br><span class="line">hexo g</span><br><span class="line">hexo d			<span class="comment">#自动生成网站静态文件，并部署到设定的仓库</span></span><br></pre></td></tr></table></figure>
+
+<p>访问<a href="https://wangqianggg.github.io/">https://xxx.github.io</a> 可以打开个人博客网页：</p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308241400198.png" alt="202308232056055"></p>
+<p>至此，个人博客网站搭建完成。</p>
+<h3 id="04-编辑器与图床工具"><a href="#04-编辑器与图床工具" class="headerlink" title="04 编辑器与图床工具"></a>04 编辑器与图床工具</h3><p><a target="_blank" rel="noopener" href="https://typora.io/">Typora</a>是一款非常好用的markdown文本编辑器。</p>
+<p><a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/">PicGo</a>图床工具的一些设置：<br>首先是下载地址：<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a><br>下拉找到当前的一个稳定版本(2.3.1)进行下载：</p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308241414299.png" alt="202308240912861"></p>
+<p>安装后运行，注意，当前版本PicGo不会自动弹窗出来，在小菜单栏中再次点击方可打开PicGo界面：</p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308241401044.png" alt="202308240854875"></p>
+<p>安装好PicGo之后，需要到GitHub中新建一个仓库来保存图片：</p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308241403418.png" alt="Snipaste_2023-08-24_12-13-56"></p>
+<p>其次需要生成一个token来供PicGo使用；<br>在GitHub中点击头像–&gt;Setting&#x2F;Developer Settings&#x2F;Personal access tokens&#x2F;Token(classic)–&gt;点击右上角的Generate new token:</p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308241404216.png" alt="202308240912861"></p>
+<p>将生成好的token复制下来，回到PicGo，找到图床设置–&gt;GitHub：<br>仓库名：账户名&#x2F;仓库名<br>分支：master或者main<br>设定token：刚刚复制的token<br>设定存储路径：PicGo&#x2F;</p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308241406268.png" alt="image-20230824140628213"></p>
+<p>点击确定后，图床配置完成，可以在上传区上传图片到仓库了；<br>接下来对Typora进行一些设置，在Typora中使用<kbd>Ctrl</kbd>+<kbd>,</kbd>进入偏好设置：</p>
+<p><img src="https://raw.githubusercontent.com/wangqianggg/Images/main/PicGo/202308241407363.png" alt="202308240949001"></p>
+<p>最后点击验证图片上传，上传成功则表示Typora设置完成，此时，在Typora中添加图片后，便可以通过PicGo直接上传到GitHub上；</p>
+<h3 id="05-截图工具"><a href="#05-截图工具" class="headerlink" title="05 截图工具"></a>05 截图工具</h3><p>选择使用<a target="_blank" rel="noopener" href="https://www.snipaste.com/">Snipaste</a></p>
+<h3 id="06-👻👻👻"><a href="#06-👻👻👻" class="headerlink" title="06 👻👻👻"></a>06 👻👻👻</h3><p>🆗<br>至此完成了个人博客的搭建，以及相关工具的配置，可以开始使用我们的个人博客进行记录了！<br>😋😋😋</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wangqianggg.github.io/2023/08/24/buildblog1/" data-id="cllx3pno300008otk0uom97b9" data-title="buildblog1" class="article-share-link"><span class="fa fa-share">Partager</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/23/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2023-08-23T07:37:51.710Z" itemprop="datePublished">2023-08-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/08/23/hello-world/">Hello World</a>
     </h1>
   
 
@@ -108,7 +479,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/11/07/hello-world/" data-id="cm36xcx3o0000s0jh0t3i3ou1" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://wangqianggg.github.io/2023/08/23/hello-world/" data-id="cllx3pnof00028otkdz2wgwgx" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Partager</span></a>
       
       
       
@@ -138,7 +509,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li></ul>
     </div>
   </div>
 
@@ -146,12 +517,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2024/11/07/hello-world/">Hello World</a>
+            <a href="/2023/10/26/DFS1/">DFS1</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/31/nvm/">nvm</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/30/vue1config/">vue1config</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/24/buildblog1/">buildblog1</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/23/hello-world/">Hello World</a>
           </li>
         
       </ul>
@@ -167,8 +554,8 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2024 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2023 relaWang<br>
+      Propulsé par <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
